@@ -1,0 +1,20 @@
+import re 
+
+dataListed = [['#Student', 'sCore'], ['Mr.Joer', '2 points'], ['Lad John', 'Six'], ['Mr.Jimmy', '2%'], ['Legend James', '3.0'], ['Miss Jane', '4']]
+print(dataListed)
+
+stringedData=str(dataListed) 
+
+stringedData = re.sub('Six', '6', stringedData)
+stringedData = re.sub('sCore', 'Score', stringedData)
+stringedData = re.sub('Mr.Joer', 'Joe',stringedData)
+stringedData = re.sub('2 points', '2', stringedData)
+stringedData = re.sub('Lad John', 'John', stringedData)
+stringedData = re.sub('#Student', 'Student', stringedData)
+stringedData = re.sub('Mr.Jimmy', 'Jimmy', stringedData)
+stringedData = re.sub('2%', '2', stringedData)
+stringedData = re.sub('Legend James', 'James', stringedData)
+stringedData = re.sub('3.0', '3', stringedData)
+stringedData = re.sub('Miss Jane', 'Jane',stringedData)
+
+print("Here is the cleaned up list that will be written to the new csv and/or graphed", stringedData)
